@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Matrix	Matrix.h	/^	Matrix(const Matrix& matrix){$/;"	f	class:Matrix
+Matrix	Matrix.h	/^	Matrix(int lines, int columns){$/;"	f	class:Matrix
+Matrix	Matrix.h	/^class Matrix{$/;"	c
+Runner	Runner.h	/^class Runner{$/;"	c
+__MATRIX_INCLUDED__	Matrix.h	5;"	d
+__RUNNER_INCLUDED__	Runner.h	4;"	d
+columns	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix
+elements	Matrix.h	/^	T *elements;$/;"	m	class:Matrix
+get	Matrix.h	/^	T get(int line, int col){$/;"	f	class:Matrix
+getElemens	Matrix.h	/^	T *getElemens(){ return elements;}$/;"	f	class:Matrix
+lines	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix
+main	main.cpp	/^int main() {$/;"	f
+run	Runner.h	/^	Matrix<T> * run(Matrix<T> m1, Matrix<T> m2, T (*func)(const T&, const T&), int noThreads){$/;"	f	class:Runner
+set	Matrix.h	/^	void set(int line, int col, T el){$/;"	f	class:Matrix
+~Matrix	Matrix.h	/^	~Matrix(){$/;"	f	class:Matrix
