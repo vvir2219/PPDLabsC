@@ -1,21 +1,53 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/f9b184d0/
+COMPLEX_H_P69S0SNW	Complex.h	/^#define COMPLEX_H_P69S0SNW$/;"	d
+Complex	Complex.cpp	/^Complex::Complex (double a, double b) {$/;"	f	class:Complex
+Complex	Complex.h	/^	Complex() { }$/;"	f	class:Complex
+Complex	Complex.h	/^class Complex$/;"	c
+GENERATOR_H_8SPAVDKT	Generator.h	/^#define GENERATOR_H_8SPAVDKT$/;"	d
+LFTC	README.md	/^# LFTC$/;"	c
+Matrix	Matrix.h	/^	Matrix() {}$/;"	f	class:Matrix
 Matrix	Matrix.h	/^	Matrix(const Matrix& matrix){$/;"	f	class:Matrix
 Matrix	Matrix.h	/^	Matrix(int lines, int columns){$/;"	f	class:Matrix
 Matrix	Matrix.h	/^class Matrix{$/;"	c
 Runner	Runner.h	/^class Runner{$/;"	c
-__MATRIX_INCLUDED__	Matrix.h	5;"	d
-__RUNNER_INCLUDED__	Runner.h	4;"	d
-columns	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix
-elements	Matrix.h	/^	T *elements;$/;"	m	class:Matrix
-get	Matrix.h	/^	T get(int line, int col){$/;"	f	class:Matrix
-getElemens	Matrix.h	/^	T *getElemens(){ return elements;}$/;"	f	class:Matrix
-lines	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix
-main	main.cpp	/^int main() {$/;"	f
-run	Runner.h	/^	Matrix<T> * run(Matrix<T> m1, Matrix<T> m2, T (*func)(const T&, const T&), int noThreads){$/;"	f	class:Runner
-set	Matrix.h	/^	void set(int line, int col, T el){$/;"	f	class:Matrix
+__MATRIX_INCLUDED__	Matrix.h	/^#define __MATRIX_INCLUDED__$/;"	d
+__RUNNER_INCLUDED__	Runner.h	/^#define __RUNNER_INCLUDED__$/;"	d
+a	Complex.h	/^	double a, b;$/;"	m	class:Complex	typeref:typename:double
+all	Makefile	/^all:$/;"	t
+b	Complex.h	/^	double a, b;$/;"	m	class:Complex	typeref:typename:double
+columns	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix	typeref:typename:int
+debug	Makefile	/^debug:$/;"	t
+elements	Matrix.h	/^	T* elements;$/;"	m	class:Matrix	typeref:typename:T *
+execFunc	Runner.h	/^	static void execFunc(T *v1, T *v2, T *rez, const std::function<T(const T&, const T&)>& func, in/;"	f	class:Runner	typeref:typename:void
+generateComplexMatrices	main.cpp	/^void generateComplexMatrices(const std::string& filename, int lines, int columns) {$/;"	f	typeref:typename:void
+generateComplexMatrix	Generator.h	/^Matrix<Complex> generateComplexMatrix(int lines, int columns) {$/;"	f	typeref:typename:Matrix<Complex>
+generateDoubleMatrices	main.cpp	/^void generateDoubleMatrices(const std::string& filename, int lines, int columns) {$/;"	f	typeref:typename:void
+generateDoubleMatrix	Generator.h	/^Matrix<double> generateDoubleMatrix(int lines, int columns) {$/;"	f	typeref:typename:Matrix<double>
+get	Matrix.h	/^	T get(int line, int col){$/;"	f	class:Matrix	typeref:typename:T
+getElemens	Matrix.h	/^	T* getElemens() const { return elements; }$/;"	f	class:Matrix	typeref:typename:T *
+imag	Complex.h	/^	inline double imag() { return b; }$/;"	f	class:Complex	typeref:typename:double
+inverse	Complex.cpp	/^Complex Complex::inverse() {$/;"	f	class:Complex	typeref:typename:Complex
+lines	Matrix.h	/^	int lines, columns;$/;"	m	class:Matrix	typeref:typename:int
+main	main.cpp	/^int main() {$/;"	f	typeref:typename:int
+mediumTime	main.cpp	/^double mediumTime(const Matrix<ValueType>& m1, const Matrix<ValueType>& m2, const std::function</;"	f	typeref:typename:double
+operator *	Complex.cpp	/^Complex Complex::operator * (const Complex& ot) {$/;"	f	class:Complex	typeref:typename:Complex
+operator +	Complex.cpp	/^Complex Complex::operator + (const Complex& ot) {$/;"	f	class:Complex	typeref:typename:Complex
+operator -	Complex.cpp	/^Complex Complex::operator - (const Complex& ot) {$/;"	f	class:Complex	typeref:typename:Complex
+operator <<	Complex.h	/^	friend std::ostream& operator << (std::ostream& os, const Complex& c) {$/;"	f	typeref:typename:std::ostream &
+operator <<	Matrix.h	/^	friend std::ostream& operator << (std::ostream& os, const Matrix<T>& mat) {$/;"	f	typeref:typename:std::ostream &
+operator >>	Complex.h	/^	friend std::istream& operator >> (std::istream& is, Complex& c) {$/;"	f	typeref:typename:std::istream &
+operator >>	Matrix.h	/^	friend std::istream& operator >> (std::istream& is, Matrix<T>& mat) {$/;"	f	typeref:typename:std::istream &
+real	Complex.h	/^	inline double real() { return a; }$/;"	f	class:Complex	typeref:typename:double
+run	Runner.h	/^	static std::unique_ptr<Matrix<T>> run(const Matrix<T>& m1, const Matrix<T>& m2, std::function<T/;"	f	class:Runner	typeref:typename:std::unique_ptr<Matrix<T>>
+runTest	main.cpp	/^double runTest(const Matrix<ValueType>& m1, const Matrix<ValueType>& m2, const std::function<Val/;"	f	typeref:typename:double
+set	Matrix.h	/^	void set(int line, int col, const T& el) {$/;"	f	class:Matrix	typeref:typename:void
+set	Matrix.h	/^	void set(int pos, const T& el) {$/;"	f	class:Matrix	typeref:typename:void
+testMapTest	main.cpp	/^double testMapTest(const std::string filename, const std::function<ValueType(const ValueType&, c/;"	f	typeref:typename:double
+~Complex	Complex.h	/^	~Complex () {}$/;"	f	class:Complex
 ~Matrix	Matrix.h	/^	~Matrix(){$/;"	f	class:Matrix

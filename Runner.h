@@ -1,4 +1,6 @@
 #include <thread>
+#include <memory>
+#include <functional>
 
 #include "Matrix.h"
 
@@ -9,16 +11,16 @@ template <typename T>
 class Runner{
 	public:
 	
-	static void execFunc(T *v1, T *v2, T *rez, T (*func)(const T&, const T&), int start, int stop){
+	static void execFunc(T *v1, T *v2, T *rez, const std::function<T(const T&, const T&)>& func, int start, int stop){
 		for(; start < stop; ++start){
 			rez[start] = func(v1[start], v2[start]);
 		}
 	}
 
-	Matrix<T> * run(const Matrix<T>& m1, const Matrix<T>& m2, T (*func)(const T&, const T&), int noThreads){
+	static std::unique_ptr<Matrix<T>> run(const Matrix<T>& m1, const Matrix<T>& m2, std::function<T(const T&, const T&)> func, int noThreads){
 		std::thread threads[noThreads];
 
-		Matrix<T> *rez = new Matrix<T>(m1.lines, m2.columns);
+		auto rez = std::make_unique<Matrix<T>>(m1.lines, m2.columns);
 		int n = m1.lines * m1.columns;
 		int size = n / noThreads;
 		int remainder = n % noThreads;
